@@ -25,12 +25,23 @@ A Chrome extension that lets you quickly copy LaTeX code (KaTeX or MathJax) from
 <img src="gif-demo-katex.gif" alt="Demo-KaTeX" width="800">
 
 #### MathJax
-<img src="gif-demo-mathjax.gif" alt="Demo-MathJax" width="800"
+<img src="gif-demo-mathjax.gif" alt="Demo-MathJax" width="800">
 
 ## Popular Sites Using MathJax/KaTeX
 Generally any math, physics, or engineering-related blog or website. Some typical examples:
 - KaTeX: ChatGPT, DeepSeek, Notion...
-- MathJax: GitHub, Stack Exchange, ProofWiki...
+- MathJax: Math Stack Exchange, ProofWiki...
+
+## Host permissions and speed
+The javascript source code is extremely simple and available [here](https://github.com/Mapaor/copy-latex-chrome-extension/blob/main/content.js). It loads after everything and is blazingly fast.
+
+However you can always customize in which hosts (websites) the extension loads or not:
+
+<img src="only-specific-sites.jpg" alt="Manage-allowed-hosts" width="800">
+
+<img src="example-specific-site.jpg" alt="Adding-an-allowed-host" width="800">
+
+This is done in `chrome://extensions` in the extension 'Details'.
 
 ## Links
 - Chrome Extension Page: _Pending_
