@@ -49,7 +49,7 @@ However you can always customize in which hosts (websites) the extension loads o
 This is done in `chrome://extensions` in the extension 'Details'.
 
 ## Links
-- Chrome Extension Page: _Pending_
+- Chrome Extension Page: [https://chromewebstore.google.com/detail/copy-latex-katex-mathjax/lmhdbdfaadjfjclobmodomehekpjpkgn](https://chromewebstore.google.com/detail/copy-latex-katex-mathjax/lmhdbdfaadjfjclobmodomehekpjpkgn)
 - GitHub Repo: [https://github.com/Mapaor/copy-latex-chrome-extension](https://github.com/Mapaor/copy-latex-chrome-extension)
 - README as a website: [https://mapaor.github.io/copy-latex-chrome-extension/](https://mapaor.github.io/copy-latex-chrome-extension/)
 
