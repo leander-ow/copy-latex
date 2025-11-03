@@ -82,6 +82,8 @@ In case you turn off the "all sites" toggle option, you can also add manual site
 
 And now the custom site should appear as a new toggle in the "Permissions and data" tab.
 
+## Links
+
 * [Chrome Web Store](https://chromewebstore.google.com/detail/copy-latex-katex-mathjax/lmhdbdfaadjfjclobmodomehekpjpkgn)
 * [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/copy-latex)
 * [GitHub Repo](https://github.com/Mapaor/copy-latex-chrome-extension)
