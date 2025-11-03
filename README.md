@@ -1,6 +1,6 @@
 # CopyLaTeX
 
-A Chrome extension that lets you quickly copy LaTeX code (KaTeX or MathJax) from equations displayed on websites like ChatGPT, DeepSeek, or any blog using mathematical equations. It works simply by hovering over an equation and clicking to copy the LaTeX expression.
+A browser extension (Chrome & Firefox) that lets you quickly copy LaTeX code (KaTeX or MathJax) from equations displayed on websites like ChatGPT, DeepSeek, or any blog using mathematical equations. It works simply by hovering over an equation and clicking to copy the LaTeX expression.
 
 Version 1.1: Now it also works with with Wikipedia and Wikiwand images.
 
@@ -24,13 +24,13 @@ Version 1.1: Now it also works with with Wikipedia and Wikiwand images.
 
 ## Example GIFs
 #### KaTeX
-<img src="gif-demo-katex.gif" alt="Demo-KaTeX" width="800">
+<img src="assets/gif-demo-katex.gif" alt="Demo-KaTeX" width="800">
 
 #### MathJax
-<img src="gif-demo-mathjax.gif" alt="Demo-MathJax" width="800">
+<img src="assets/gif-demo-mathjax.gif" alt="Demo-MathJax" width="800">
 
 #### Wikipedia images
-<img src="gif-demo-wikipedia.gif" alt="Demo-MathJax" width="800">
+<img src="assets/gif-demo-wikipedia.gif" alt="Demo-MathJax" width="800">
 
 ## Popular Sites Using MathJax/KaTeX
 Generally any math, physics, or engineering-related blog or website. Some typical examples:
@@ -40,13 +40,13 @@ Generally any math, physics, or engineering-related blog or website. Some typica
 ## Host permissions and speed
 The javascript source code is extremely simple and available [here](https://github.com/Mapaor/copy-latex-chrome-extension/blob/main/content.js). It loads after everything and is blazingly fast.
 
-However you can always customize in which hosts (websites) the extension loads or not:
+### Chrome
 
-<img src="only-specific-sites.jpg" alt="Manage-allowed-hosts" width="800">
+You can customize on which sites the extension loads via `chrome://extensions` → 'Details'.
 
-<img src="example-specific-site.jpg" alt="Adding-an-allowed-host" width="800">
+<img src="assets/only-specific-sites.jpg" alt="Manage allowed hosts Chrome" width="800">
 
-This is done in `chrome://extensions` in the extension 'Details'.
+<img src="assets/example-specific-site.jpg" alt="Adding an allowed host Chrome" width="800">
 
 <details>
 <summary>Recommended websites to add</summary>
@@ -70,13 +70,24 @@ This is done in `chrome://extensions` in the extension 'Details'.
 
 </details>
 
-## Links
-- Chrome Extension Page: [https://chromewebstore.google.com/detail/copy-latex-katex-mathjax/lmhdbdfaadjfjclobmodomehekpjpkgn](https://chromewebstore.google.com/detail/copy-latex-katex-mathjax/lmhdbdfaadjfjclobmodomehekpjpkgn)
-- GitHub Repo: [https://github.com/Mapaor/copy-latex-chrome-extension](https://github.com/Mapaor/copy-latex-chrome-extension)
-- README as a website: [https://mapaor.github.io/copy-latex-chrome-extension/](https://mapaor.github.io/copy-latex-chrome-extension/)
+### Firefox
+
+You can manage site permissions via **Firefox Settings > Extensions & Themes** (or `about:addons`), select the extension, and go to **Permissions and Data**:
+
+<img src="assets/toggle-firefox.jpg" alt="Manage extension permissions Firefox" width="800">
+
+In case you turn off the "all sites" toggle option, you can also add manual sites that are not in the default list:
+
+<img src="assets/manual-specific-site.jpg" alt="Manage extension permissions Firefox" width="800">
+
+And now the custom site should appear as a new toggle in the "Permissions and data" tab.
+
+* [Chrome Web Store](https://chromewebstore.google.com/detail/copy-latex-katex-mathjax/lmhdbdfaadjfjclobmodomehekpjpkgn)
+* [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/copy-latex)
+* [GitHub Repo](https://github.com/Mapaor/copy-latex-chrome-extension)
+* [README as a website](https://mapaor.github.io/copy-latex-chrome-extension/)
 
 # Related
-There is also a Firefox version: [https://github.com/Mapaor/copy-latex-firefox-extension](https://github.com/Mapaor/copy-latex-firefox-extension)
 
 You can also use this extension in Brave and Arc (they support Chrome extensions by default). 
 

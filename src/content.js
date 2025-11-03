@@ -1,7 +1,7 @@
 // Inject page script for MathJax v3 extraction
 function injectMathJaxPageScript() {
   const script = document.createElement('script');
-  script.src = chrome.runtime.getURL('mathjax-inject.js');
+  script.src = (typeof browser !== 'undefined' ? browser : chrome).runtime.getURL('mathjax-inject.js');
   script.onload = function() {
     console.log('[HoverLatex] Injected mathjax-inject.js');
     this.remove();
