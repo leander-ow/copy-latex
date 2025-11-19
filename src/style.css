@@ -1,0 +1,122 @@
+:root {
+  --bg: #f7f8fa;
+  --fg: #2c2f33;
+  --accent: #5865f2;
+  --accent-hover: #4752c4;
+  --border: #d1d5db;
+  --radius: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #18191c;
+    --fg: #e4e6eb;
+    --accent: #7289da;
+    --accent-hover: #5b6eae;
+    --border: #3a3c43;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+  }
+
+  .replacement {
+    background: #242528;
+  }
+
+  .replacement input {
+    background: #2c2f33;
+    color: var(--fg);
+  }
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  min-width: 450px;
+  padding: 15px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#replacements {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.replacement {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.replacement input {
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+}
+
+.replacement button {
+  padding: 6px 8px;
+  border: none;
+  border-radius: var(--radius);
+  background: #e74c3c;
+  color: white;
+  cursor: pointer;
+}
+
+.replacement button:hover {
+  background: #c0392b;
+}
+
+button {
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+#add {
+  background: var(--accent);
+  color: white;
+}
+
+#add:hover {
+  background: var(--accent-hover);
+}
+
+#save {
+  background: #10b981;
+  color: white;
+}
+
+#save:hover {
+  background: #0e9f75;
+}
+
+#buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#buttons button {
+  flex: 1;
+}

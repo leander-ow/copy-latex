@@ -1,7 +1,8 @@
+const ext = typeof browser !== 'undefined' ? browser : chrome;
+
 // Inject page script for MathJax v3 extraction
 function injectMathJaxPageScript() {
   const script = document.createElement('script');
-  const ext = typeof browser !== 'undefined' ? browser : chrome;
   script.src = ext.runtime.getURL('mathjax-inject.js');
   script.onload = function() {
     console.log('[HoverLatex] Injected mathjax-inject.js');
@@ -193,15 +194,28 @@ function hideOverlay() {
 }
 
 function copyLatex(tex) {
-  navigator.clipboard.writeText(tex).then(() => {
-    overlay.classList.add('copied');
-    overlay.querySelector('span').textContent = 'Copied!';
-    setTimeout(() => {
-      overlay.classList.remove('copied');
-      overlay.querySelector('span').textContent = 'Click to copy';
-    }, 1500);
-  }).catch(err => {
-    console.error("[HoverLatex] Clipboard error:", err);
+  ext.storage.sync.get({ replacements: [] }, (data) => {
+    let result = tex;
+    if (data.replacements && Array.isArray(data.replacements)) {
+      data.replacements.forEach(rep => {
+        try {
+          const regex = new RegExp(rep.from, "g");
+          result = result.replace(regex, rep.to);
+        } catch (e) {
+          console.error("Invalid regex in replacement:", rep.from, e);
+        }
+      });
+    }
+    navigator.clipboard.writeText(result).then(() => {
+      overlay.classList.add('copied');
+      overlay.querySelector('span').textContent = 'Copied!';
+      setTimeout(() => {
+        overlay.classList.remove('copied');
+        overlay.querySelector('span').textContent = 'Click to copy';
+      }, 1500);
+    }).catch(err => {
+      console.error("[HoverLatex] Clipboard error:", err);
+    });
   });
 }
 
