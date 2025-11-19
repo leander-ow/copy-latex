@@ -195,7 +195,7 @@ function hideOverlay() {
 function copyLatex(tex) {
   navigator.clipboard.writeText(tex).then(() => {
     overlay.classList.add('copied');
-    overlay.querySelector('span').textContent = 'Copied! ✅';
+    overlay.querySelector('span').textContent = 'Copied!';
     setTimeout(() => {
       overlay.classList.remove('copied');
       overlay.querySelector('span').textContent = 'Click to copy';
