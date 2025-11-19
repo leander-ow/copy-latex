@@ -2,25 +2,14 @@
 
 A browser extension (Chrome & Firefox) that lets you quickly copy LaTeX code (KaTeX or MathJax) from equations displayed on websites like ChatGPT, DeepSeek, or any blog using mathematical equations. It works simply by hovering over an equation and clicking to copy the LaTeX expression.
 
-Version 1.1: Now it also works with with Wikipedia and Wikiwand images.
+## Features
 
-## How it works technically
-
-1. **Content Script (`content.js`)**:
-   - Automatically detects all `<span class="katex">` elements on the page.
-   - Extracts the LaTeX code from `<annotation encoding="application/x-tex">`.
-   - Shows an overlay when hovering over the equation.
-   - Allows clicking to copy the code to clipboard using `navigator.clipboard.writeText()`.
-   - Uses an inline `<svg>` to avoid external file dependencies.
-
-2. **CSS (`overlay.css`)**:
-   - Overlay styling: white background, subtle border and shadow.
-   - Large, readable text.
-   - Centered over the KaTeX formula.
-   - `pointer` cursor.
-
-3. **Extension declaration `manifest.json`**:
-   - Injects `content.js` and `overlay.css`.
+- **Click-to-copy LaTeX** from KaTeX and MathJax equations  
+- **Hover overlay** showing a “Copy LaTeX” badge  
+- **Wikipedia & Wikiwand support**
+- **Regex replacement rules**  
+  - Customizable via the popup UI  
+  - Useful to automatically fix formatting quirks or tailor LaTeX output
 
 ## Example GIFs
 #### KaTeX
@@ -37,8 +26,7 @@ Generally any math, physics, or engineering-related blog or website. Some typica
 - KaTeX: ChatGPT, DeepSeek, Notion...
 - MathJax: Math Stack Exchange, ProofWiki...
 
-## Host permissions and speed
-The javascript source code is extremely simple and available [here](https://github.com/Mapaor/copy-latex-chrome-extension/blob/main/content.js). It loads after everything and is blazingly fast.
+## Host Permissions
 
 ### Chrome
 
@@ -82,12 +70,14 @@ In case you turn off the "all sites" toggle option, you can also add manual site
 
 And now the custom site should appear as a new toggle in the "Permissions and data" tab.
 
+## Open Source
+The code is available [here](https://github.com/leander-ow/copy-latex).
+
 ## Links
 
-* [Chrome Web Store](https://chromewebstore.google.com/detail/copy-latex-katex-mathjax/lmhdbdfaadjfjclobmodomehekpjpkgn)
-* [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/copy-latex)
-* [GitHub Repo](https://github.com/Mapaor/copy-latex-chrome-extension)
-* [README as a website](https://mapaor.github.io/copy-latex-chrome-extension/)
+* [Chrome Web Store](https://chromewebstore.google.com/detail/copy-latex-katex-mathjax/lmhdbdfaadjfjclobmodomehekpjpkgn) (older verion of [Mapaor](https://github.com/Mapaor/copy-latex-chrome-extension))
+* [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/copy-latex) (older verion of [Mapaor](https://github.com/Mapaor/copy-latex-firefox-extension))
+* [GitHub Repo](https://github.com/leander-ow/copy-latex)
 
 # Related
 
