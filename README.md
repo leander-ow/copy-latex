@@ -75,8 +75,8 @@ The code is available [here](https://github.com/leander-ow/copy-latex).
 
 ## Links
 
+* [Firefox Add-on](https://addons.mozilla.org/de/firefox/addon/copy-latex2/)
 * [Chrome Web Store](https://chromewebstore.google.com/detail/copy-latex-katex-mathjax/lmhdbdfaadjfjclobmodomehekpjpkgn) (older verion of [Mapaor](https://github.com/Mapaor/copy-latex-chrome-extension))
-* [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/copy-latex) (older verion of [Mapaor](https://github.com/Mapaor/copy-latex-firefox-extension))
 * [GitHub Repo](https://github.com/leander-ow/copy-latex)
 
 # Related
